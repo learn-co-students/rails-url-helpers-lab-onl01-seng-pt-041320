@@ -6,6 +6,11 @@ class StudentsController < ApplicationController
   end
 
   def show
+
+  end
+
+  def activate
+    
   end
 
   private

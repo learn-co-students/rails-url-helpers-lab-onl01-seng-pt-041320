@@ -10,7 +10,10 @@ class StudentsController < ApplicationController
   end
 
   def activate
-    
+    @student=Student.find_by_id(params[:id])
+    @student.active = !@student.active
+    @student.save
+    redirect_to action: "show"
   end
 
   private

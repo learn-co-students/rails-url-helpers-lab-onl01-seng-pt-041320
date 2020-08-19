@@ -1,0 +1,5 @@
+<%= form_tag(url: "/students/:id", method: "post") do %>
+    <%= label_tag(:activate, "Activate/deactivate student:") %>
+    <%= check_box_tag(:activate) %>
+    <%= submit_tag("Activate") %>
+<% end %>

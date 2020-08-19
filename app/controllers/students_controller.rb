@@ -2,7 +2,6 @@ class StudentsController < ApplicationController
   before_action :set_student, only: :show
   
   def index
-    byebug
     @students = Student.all
   end
 
@@ -18,7 +17,7 @@ class StudentsController < ApplicationController
       @student.active = true
     end
     @student.save
-    render 'student_path(student)'
+    redirect_to student_path
 
   end
 

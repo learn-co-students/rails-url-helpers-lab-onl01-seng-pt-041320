@@ -1,1 +1,3 @@
 <h1><%= @student.to_s %></h1>
+<form_for(@student, url: activate_student_path(@student), html: {method: "patch"})
+<p><% if !@student.active %> This student is currently inactive. <% else %> This student is currently active. </p> <% end %>

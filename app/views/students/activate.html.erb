@@ -1,0 +1,5 @@
+<%= from_with(model: @student) do %>
+    <%= label_tag(:activate, "activate/deactivate student:") %>
+    <%= check_box_tag(:activate) %>
+    <%= submit_tag("Activate")%>
+<% end %>
